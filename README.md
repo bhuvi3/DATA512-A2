@@ -44,7 +44,7 @@ Use the REST API endpoint in this project to retrieve the quality classes. The d
 
 ## Files Created
 This notebook creates 2 CSV files of data extracted and compiled as part of this analysis.
-- ```wp_wpds_politicians_by_country.csv```: This is the main output csv file used for this analysis. The scehma of the table along with descriptions of the attributes are shown below.
+- ```wp_wpds_politicians_by_country.csv```: This is the final output csv file used for this analysis. The scehma of the table along with descriptions of the attributes are shown below.
 
 | Column          | Description                               |
 |-----------------|-------------------------------------------|
@@ -54,7 +54,7 @@ This notebook creates 2 CSV files of data extracted and compiled as part of this
 | article_quality | Article quality tag retrieved by ORES.    |
 | population      | The population of the country.            |
 
-- ```wp_wpds_countries-no_match.csv```: This table contains revision ids of Wikipedia articles for which we could not find matching countries in our population data. This table has same schema as the abovementioned table, but the field ```population``` contains NaNs. 
+- ```wp_wpds_countries-no_match.csv```: This table contains revision ids of Wikipedia articles for which we could **not** find matching countries in our population data. This table has same schema as the abovementioned table, but the field ```population``` contains NaNs. 
 
 Also it creates the following auziliary files:
 - ```ores_missed_rev_ids.txt```: The revision ids of the Wikipedia articles which for which we could not get the quality classes from ORES.
@@ -73,4 +73,4 @@ The following result tables have been created to observe the summary of the abov
 
 
 ## License
-This project code is released under MIT Licence.
+This project code is released under [MIT Licence](https://opensource.org/licenses/MIT).
