@@ -70,7 +70,19 @@ The following result tables have been created to observe the summary of the abov
 - _Geographic regions by coverage_: "Ranking of geographic regions (in descending order) in terms of the relative proportion of politician articles from countries in each region that are of GA and FA-quality".
 
 ## Reflections and Implications.
+Working on the Wikipedia data and getting the quality scores for the articles was interseting. However, the REST API method for getting ORES data seems to be a bit non-reliable, hence I used cache to save the response locally after a successful call. This helped me learn how to write code by handling exceptions while using REST APIs.
 
+I observed some suspicious data points which makes me question the reliability on the population data, for instance same population value for some countries like Tualu and Nauru. This brings up a question - how can we quantify the quality of the data and transparently publish along with the data?
+
+**Discussion regarding the selected questions:**
+- Question 3: "What might your results suggest about (English) Wikipedia as a data source?"
+We observe that the countries with the top coverage from Wikipedia articles on politicians, mostly have a relatively low population, and most of them have low or almost zero high-quality articles. On the other hand, the countries having high population seem to have a lower coverage. This could suggest that the Wikipedia articles might not be covering several local politicians who are not famous in the highly populated countries. Looks like some countries like North Korea, and Saudi Arabia which are frequently spotted in political and social debates respectively have a high relative-quality. However, there are a lot of countries with no high-quality articles. This shows that the Wikipedia data is biased across coverage and relative frequency for different countries espectially based on the population. 
+
+- Question 4: "What might your results suggest about the internet and global society in general?"
+Wikipedia is crowd maintained open community project, and it has influence from the active participants in Wikipedia. The covereage and relative quality of wikipedia articles might be related to the current social and political issues. If a country becomes popular with respect to political issues like North Korea and Saudi Arabia, then we can expect to see more related activities on internet and social media, hence this could be correlated to the high relative quality of articles for these countries.
+
+- Question 7: "How might a researcher supplement or transform this dataset to potentially correct for the limitations/biases you observed?"
+A researcher could identify the biases in the data which would affect their specific project. Extreme datapoints could affect the analysis, hence removing a few outliers or identifying them would help us account such cases in our analysis. Also, a researcher might keep an eye out for data-entry or system-error issues. The Wikipedia data could be more suited for intra-country or intra-continent analysis of quality of articles, rather than inter-country or inter-continentanalysis. I think this is because of observed high variabality in the coverage and the relative-frequency. Therefore, while doing inter-country quality analysis of Wikipedia articles, a researcher could account for the population of the country by considering it as a confounding variable, and probably by normalizing affected the attributes with respect to population.
 
 ## License
 This project code is released under [MIT Licence](https://opensource.org/licenses/MIT).
